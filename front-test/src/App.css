@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -36,3 +35,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+.header {
+  background-color: #a53ceb ;
+}
+
+ /* bg-purple-500 opacity-90 */
