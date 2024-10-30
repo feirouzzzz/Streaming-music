@@ -1,22 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
  
 function Login() { 
+    const [email, setEmail] = useState("")
+    const [pass, setPass] = useState("")
+
+    let user = { email, pass}
+    
+
+    const LoginFunction = (event) => {
+        event.preventDefault();
+
+        console.log(user)
+    }
+    
+
   return (
     <div className='bg-purple-600 py-20 h-screen flex items-center text-white bg-gradient-to-r from-indigo-400 '>
         <div className='bg-black py-6 pb-12 w-2/5 mx-auto rounded-md'>
             <img src="../logo.png" className='w-16 mx-auto' alt='logo' />
             <h1 className='   text-2xl pt-2 pb-6 text-center font-bold'>Login to Spotify</h1>
-            <form className='px-32' >
+            <form onSubmit={LoginFunction} className='px-32' >
                 <div>
                     <label > Email</label>
                     <br></br>
-                    <input type='email' className='w-full bg-transparent border py-2 px-4 rounded-md mt-1.5'placeholder='Enter email' />
-                    
+                    <input type='email' onChange={(e)=> setEmail(e.target.value)} className='w-full bg-transparent border py-2 px-4 rounded-md mt-1.5'placeholder='Enter email' />
                 </div>
                 <div className='mt-6'>
                     <label > Password</label>
                     <br></br>
-                    <input type='password' className='w-full bg-transparent border py-2 px-4 rounded-md mt-1.5'placeholder='Enter password' />
+                    <input type='password' onChange={(p) => setPass(p.target.value)}className='w-full bg-transparent border py-2 px-4 rounded-md mt-1.5'placeholder='Enter password' />
                     
                 </div>
                 <button className='bg-purple-500 hover:bg-purple-600 transition-all hover:scale-105 hover:shadow-purple-300 w-full mt-12 rounded-full py-3 font-medium'>Log in</button>
