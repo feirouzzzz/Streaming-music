@@ -19,8 +19,7 @@ function Signup() {
   return (
     <div className='bg-purple-600 py-20 h-screen flex items-center text-white bg-gradient-to-r from-indigo-400 '>
         <div className='bg-black py-6 pb-12 w-2/5 mx-auto rounded-md'>
-            <img src="../logo.png" className='mx-auto w-16' alt='logo' />
-            <h1 className='text-center text-4xl font-bold mt-6'> Sign up to <br></br> start listening </h1>
+x            <h1 className='text-center text-4xl font-bold mt-6'> Sign up to <br></br> start listening </h1>
 
             <form onSubmit={SignupFunction} className='px-32 mt-10 mx-auto'>
                 <div className='flex flex-col mb-6'>
