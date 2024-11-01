@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
- 
+ import { Link } from 'react-router-dom'
 function Login() { 
     const [email, setEmail] = useState("")
     const [pass, setPass] = useState("")
@@ -31,12 +31,12 @@ function Login() {
                     <input type='password' onChange={(p) => setPass(p.target.value)}className='w-full bg-transparent border py-2 px-4 rounded-md mt-1.5'placeholder='Enter password' />
                     
                 </div>
-                <button className='bg-purple-500 hover:bg-purple-600 transition-all hover:scale-105 hover:shadow-purple-300 w-full mt-12 rounded-full py-3 font-medium'>Log in</button>
+                < button className='bg-purple-500 hover:bg-purple-600 transition-all hover:scale-105 hover:shadow-purple-300 w-full mt-12 rounded-full py-3 font-medium'>Log in</button>
             </form>
             <h1 className='text-center mt-10 underline opacity-80 hover:opacity-100 transition-all'> Forget your password? </h1>
             <div className='flex items-center justify-center space-x-2 mt-4'>
                 <p className='opacity-80'> Don't have an account? </p>
-                <a className=' underline opacity-80 hover:opacity-100 transition-all'> Sign up for Spotify </a>
+                <Link to="/Signup" className=' underline opacity-80 hover:opacity-100 transition-all'> Sign up for Spotify </Link>
             </div>
         </div>
     </div>
